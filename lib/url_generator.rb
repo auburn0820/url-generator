@@ -5,7 +5,7 @@ require_relative "url_generator/version"
 module UrlGenerator
   class UrlGenerator
     def initialize(base_url)
-      @elements = Array.new(base_url)
+      @elements = [base_url]
     end
 
     def append(element)
