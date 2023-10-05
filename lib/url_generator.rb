@@ -10,10 +10,12 @@ module UrlGenerator
 
     def append(element)
       @elements.append(element)
+      self
     end
 
     def query(key, value)
       @elements.include?('?') ? @elements.append("&#{key}=#{value}") : @elements.append("?#{key}=#{value}")
+      self
     end
 
     def build
